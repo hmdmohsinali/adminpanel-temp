@@ -11,7 +11,6 @@ import { Addadmin } from "../Sidebar Pages/admins/AddAdmin";
 import { AdminDetails } from "../Sidebar Pages/admins/adminDetails";
 import { Admins } from "../Sidebar Pages/admins/admins";
 import UserChat from "../Sidebar Pages/userChat/UserChat";
-import Meetup from "../meetupManagement/Meetup";
 
 
 export const ThemeRoutes = [
@@ -24,7 +23,6 @@ export const ThemeRoutes = [
       { path: "starter", exact: true, element: <PrivateRouteAdmin element={<Statistics />} /> },
       { path: "userdetails/:id", exact: true, element: <PrivateRouteAdmin element={<UserDetails />} /> },
       { path: 'usermanagment', exact: true, element: <PrivateRouteAdmin element={<Users />} /> },
-      { path: 'meetupmanage', exact: true, element: <PrivateRouteAdmin element={<Meetup/>} /> },
       
       { path: 'adminuserchat', exact: true, element: <PrivateRouteAdmin element={<AdminUserChat/>} /> },
       { path: 'userchat', exact: true, element: <PrivateRouteAdmin element={<UserChat/>} /> },

@@ -50,13 +50,14 @@ export async function authenticateAdmin(email, password) {
         if (!email || !password) {
             throw new Error("Email and password are required.");
         }
-
+        console.log(email)
         // Query Firestore for admin with the given email
         // const adminSnapshot = await getDoc(doc(db, "admins", email));
         const adminsSnapshot = await getDocs(collection(db, 'admins'));
         let adminData;
         for (const adminDoc of adminsSnapshot.docs) {
             const adminDocData = adminDoc.data();
+            console.log(adminDocData)
             if (adminDocData.email === email) {
                 adminData = adminDocData;
                 break;
